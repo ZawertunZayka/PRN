@@ -3,143 +3,252 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Oficjalna strona Polskiego Ruchu Narodowego - Nowa era dla Polski">
   <title>Polski Ruch Narodowy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Основные стили */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
       background-color: #f9f9f9;
       color: #333;
       line-height: 1.6;
     }
     header {
-      background: #2c3e50;
+      background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)),
+                  url('https://source.unsplash.com/random/1920x600/?poland,flag') center/cover;
       color: #fff;
-      padding: 20px;
+      padding: 120px 20px;
       text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
     nav {
       background: #34495e;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     nav ul {
       list-style: none;
       display: flex;
       justify-content: center;
-      padding: 10px;
+      padding: 15px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
     nav ul li {
-      margin: 0 15px;
+      margin: 0 20px;
     }
     nav ul li a {
       color: #fff;
       text-decoration: none;
       font-weight: bold;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
     }
     nav ul li a:hover {
-      text-decoration: underline;
+      background: #2c3e50;
+      transform: translateY(-2px);
     }
     main {
-      max-width: 1000px;
-      margin: 20px auto;
-      padding: 20px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 30px;
       background: #fff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border-radius: 10px;
     }
     section {
-      margin-bottom: 40px;
+      margin-bottom: 60px;
+      padding: 30px;
+      border-radius: 8px;
+      background: #f8f9fa;
     }
     section h2 {
-      margin-bottom: 15px;
+      margin-bottom: 25px;
       color: #2c3e50;
+      font-size: 2.2em;
+      border-left: 5px solid #34495e;
+      padding-left: 15px;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .card i {
+      font-size: 2.5em;
+      color: #34495e;
+      margin-bottom: 15px;
     }
     footer {
       background: #2c3e50;
       color: #fff;
-      text-align: center;
-      padding: 10px;
-      margin-top: 20px;
+      padding: 40px 20px;
+      margin-top: 60px;
     }
-    /* Адаптивность */
-    @media (max-width: 600px) {
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .social-links a {
+      color: #fff;
+      font-size: 1.5em;
+      margin: 0 10px;
+      transition: all 0.3s ease;
+    }
+    .social-links a:hover {
+      color: #f1c40f;
+      transform: translateY(-3px);
+    }
+    @media (max-width: 768px) {
       nav ul {
         flex-direction: column;
+        text-align: center;
       }
       nav ul li {
-        margin: 5px 0;
+        margin: 10px 0;
       }
+      header {
+        padding: 80px 20px;
+      }
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    .contact-info {
+      display: grid;
+      gap: 15px;
+    }
+    .contact-info a {
+      color: #2c3e50;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .contact-info a:hover {
+      color: #34495e;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Polski Ruch Narodowy</h1>
-    <p>Stwórz swoją partię - Nowa era dla Polski</p>
+    <p style="margin-top: 20px; font-size: 1.2em;">Stwórzmy razem przyszłość Polski</p>
   </header>
   <nav>
     <ul>
-      <li><a href="#home">Strona Główna</a></li>
-      <li><a href="#ideologia">Ideologia</a></li>
-      <li><a href="#o-nas">O Nas</a></li>
-      <li><a href="#kontakt">Kontakt</a></li>
+      <li><a href="#home"><i class="fas fa-home"></i> Strona Główna</a></li>
+      <li><a href="#ideologia"><i class="fas fa-flag"></i> Ideologia</a></li>
+      <li><a href="#o-nas"><i class="fas fa-users"></i> O Nas</a></li>
+      <li><a href="#kontakt"><i class="fas fa-envelope"></i> Kontakt</a></li>
     </ul>
   </nav>
   <main>
-    <!-- Strona Główna -->
     <section id="home">
-      <h2>Witamy w Polski Ruch Narodowy</h2>
-      <p>
-        Polski Ruch Narodowy to nowa inicjatywa polityczna, stworzona w ramach szkolnego projektu. Naszym celem jest stworzenie partii, która opiera się na wartościach patriotycznych, tradycji i nowoczesnych rozwiązaniach dla Polski.
-      </p>
+      <h2>Witamy w Polskim Ruchu Narodowym</h2>
+      <div class="grid-container">
+        <div class="card">
+          <i class="fas fa-handshake"></i>
+          <h3>Jednoczymy Polaków</h3>
+          <p>Budujemy wspólnotę opartą na wartościach narodowych i obywatelskiej odpowiedzialności.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-book"></i>
+          <h3>Edukacja</h3>
+          <p>Inwestujemy w nowoczesną edukację, która przygotuje młode pokolenie do wyzwań przyszłości.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-chart-line"></i>
+          <h3>Rozwój</h3>
+          <p>Promujemy zrównoważony rozwój gospodarczy oparty na polskim kapitale i innowacjach.</p>
+        </div>
+      </div>
     </section>
 
-    <!-- Ideologia -->
     <section id="ideologia">
       <h2>Nasza Ideologia</h2>
-      <p>
-        Wierzymy, że przyszłość Polski opiera się na:
-      </p>
-      <ul>
-        <li>Promowaniu patriotyzmu i wartości narodowych.</li>
-        <li>Wspieraniu edukacji i innowacji.</li>
-        <li>Budowaniu sprawiedliwego społeczeństwa.</li>
-        <li>Ochronie tradycji i rodziny.</li>
-      </ul>
-      <p>
-        Nasza partia stawia na dialog, odpowiedzialność i transparentność w działaniu.
-      </p>
+      <div class="grid-container">
+        <div class="card">
+          <i class="fas fa-heart"></i>
+          <h3>Patriotyzm</h3>
+          <p>Miłość do Ojczyzny to podstawa naszej tożsamości narodowej i społecznej odpowiedzialności.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-balance-scale"></i>
+          <h3>Sprawiedliwość</h3>
+          <p>Równe szanse dla wszystkich obywateli i uczciwy podział dóbr narodowych.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-hand-holding-heart"></i>
+          <h3>Solidarność</h3>
+          <p>Wspieramy rodziny, osoby potrzebujące i lokalne społeczności.</p>
+        </div>
+      </div>
     </section>
 
-    <!-- O Nas -->
     <section id="o-nas">
       <h2>O Nas</h2>
-      <p>
-        Polski Ruch Narodowy został założony przez grupę młodych, zaangażowanych obywateli, którzy wierzą w potrzebę zmian. Łączymy nowoczesne podejście z głębokim szacunkiem do historii i tradycji Polski.
-      </p>
-      <p>
-        Naszą siłą jest różnorodność i otwartość na nowe pomysły, co pozwala nam budować przyszłość opartą na wspólnych wartościach.
-      </p>
+      <div class="grid-container">
+        <div class="card">
+          <h3>Nasza Historia</h3>
+          <p>Powstałysmy w 2023 roku z inicjatywy młodych działaczy społecznych, którym leży na sercu dobro Polski.</p>
+        </div>
+        <div class="card">
+          <h3>Cele</h3>
+          <p>Modernizacja państwa przy zachowaniu tradycyjnych wartości i suwerenności narodowej.</p>
+        </div>
+        <div class="card">
+          <h3>Działania</h3>
+          <p>Organizujemy spotkania, debaty i inicjatywy społeczne w całym kraju.</p>
+        </div>
+      </div>
     </section>
 
-    <!-- Kontakt -->
     <section id="kontakt">
       <h2>Kontakt</h2>
-      <p>
-        Masz pytania lub chcesz dołączyć do naszej inicjatywy? Skontaktuj się z nami:
-      </p>
-      <ul>
-        <li>Email: kontakt@polskiruch.pl</li>
-        <li>Telefon: +48 123 456 789</li>
-        <li>Adres: ul. Przykładowa 1, 00-001 Warszawa</li>
-      </ul>
+      <div class="contact-info">
+        <div class="card">
+          <p><i class="fas fa-envelope"></i> Email: <a href="mailto:kontakt@polskiruch.pl">kontakt@polskiruch.pl</a></p>
+          <p><i class="fas fa-phone"></i> Telefon: <a href="tel:+48123456789">+48 123 456 789</a></p>
+          <p><i class="fas fa-map-marker-alt"></i> Adres: ul. Przykładowa 1, 00-001 Warszawa</p>
+        </div>
+      </div>
     </section>
   </main>
+
   <footer>
-    <p>&copy; 2025 Polski Ruch Narodowy. Wszelkie prawa zastrzeżone.</p>
+    <div class="footer-content">
+      <div>
+        <h4>Polski Ruch Narodowy</h4>
+        <p>Projekt szkolny - Wszelkie prawa zastrzeżone © 2024</p>
+      </div>
+      <div>
+        <h4>Śledź nas</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
